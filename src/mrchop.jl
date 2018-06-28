@@ -7,8 +7,9 @@ INPUTS: function, (binary) operator, array/dataframe, margin.
 
 OUTPUT: array/dataframe.
 
-# source
-https://github.com/robertschnitman/afp.
+# sources
+Main: https://github.com/robertschnitman/afpj
+R equivalent: https://github.com/robertschnitman/afp
 
 """
 
