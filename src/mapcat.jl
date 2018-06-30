@@ -8,7 +8,8 @@ INPUTS: function, array of arrays, dimensiosn.
 OUTPUT: array.
 
 # sources
-Main: https://github.com/robertschnitman/afpj
+https://github.com/robertschnitman/afpj
+https://github.com/robertschnitman/afp/blob/master/R/do.bind.R
 """
 
 function mapcat(f, a, d)
