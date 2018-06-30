@@ -1,5 +1,5 @@
 """
-    reducechop(o, x, m)
+reducechop(o, x, m)
 	
 Reduce a given collection x with a given binary operator o column-wise (m = 1) or row-wise (m = 2).
 
