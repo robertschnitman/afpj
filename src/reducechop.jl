@@ -6,8 +6,7 @@ Reduce a given collection x with a given binary operator o column-wise (m = 1) o
 OUTPUT: array/dataframe.
 
 # sources
-Main: https://github.com/robertschnitman/afpj
-
+Main - https://github.com/robertschnitman/afpj/edit/master/src/reducechop.jl
 """
 
 reducechop(o, x, m) = mapslices(z -> reduce(o, z), x, m)
