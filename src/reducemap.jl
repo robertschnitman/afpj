@@ -1,9 +1,7 @@
 """
-mrchop(f, o, x, d = 2)
+reducemap(f, o, x, d = 2) # function, (binary) operator, array/dataframe, dimension.
 	
 Map a function `f` to some data `x` and then reduce it column-wise (d = 1) or row-wise (d = 2, the default). Calls mapslices() and mapreduce().
-
-INPUTS: function, (binary) operator, array/dataframe, dimension.
 
 OUTPUT: array/dataframe.
 
