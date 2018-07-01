@@ -1,5 +1,5 @@
 """
-reducechop(o, x, d)
+reducechop(o, x, d) # (binary) operator, array/dataframe, dimension
 	
 Reduce a given collection x with a given binary operator o column-wise (d = 1) or row-wise (d = 2).
 
