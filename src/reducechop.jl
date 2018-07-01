@@ -1,12 +1,12 @@
 """
-reducechop(o, x, m)
+reducechop(o, x, d)
 	
-Reduce a given collection x with a given binary operator o column-wise (m = 1) or row-wise (m = 2).
+Reduce a given collection x with a given binary operator o column-wise (d = 1) or row-wise (d = 2).
 
 OUTPUT: array/dataframe.
 
-# sources
-Main - https://github.com/robertschnitman/afpj/edit/master/src/reducechop.jl
+# source
+Main - https://github.com/robertschnitman/afpj/blob/master/src/reducechop.jl
 """
 
-reducechop(o, x, m) = mapslices(z -> reduce(o, z), x, m)
+reducechop(o, x, d) = mapslices(z -> reduce(o, z), x, d)
