@@ -3,7 +3,7 @@ mrchop(f, o, x, d)
 	
 Map a function `f` to some data `x` and then reduce it column-wise (d = 1) or row-wise (d = 2). Calls mapslices() and mapreduce().
 
-INPUTS: function, (binary) operator, array/dataframe, margin.
+INPUTS: function, (binary) operator, array/dataframe, dimension.
 
 OUTPUT: array/dataframe.
 
