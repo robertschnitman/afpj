@@ -1,7 +1,7 @@
 """
-mapfilter(f, p, x) # function map, function logical, collection)
+mapfilter(f, p, x) # (map) function, predicate, collection)
 	
-Map a function `f` and then filter the result by a function `p` for a collection `x`.
+Map a function `f` and then filter the result by a predicate `p` for a collection `x`.
 
 OUTPUT: array.
 
