@@ -8,7 +8,7 @@ OUTPUT: array.
 Particularly useful when the array of arrays are subsets of an original master array and that the desired output is the combined arrays after mapping the subset-contingent function on each of them. Part of the "split-apply-combine" strategy (Wickham 2011).
 
 # sources
-Main - https://github.com/robertschnitman/afpj/edit/master/src/mapcat.jl
+Main - https://github.com/robertschnitman/afpj/blob/master/src/mapcat.jl
 R equivalent - https://github.com/robertschnitman/afp/blob/master/R/do.bind.R
 Wickham, Hadley (2011). "The Split-Apply-Combine Strategy for Data Analysis". Journal of Statistical Software, vol. 40, issue 1. https://www.jstatsoft.org/article/view/v040i01/v40i01.pdf
 """
