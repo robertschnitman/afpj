@@ -1,7 +1,7 @@
 """
-mapsub(f, x, p, out_true) # function, data, predicate, output value if true.
+mapsub(f, p, x, out_true) # function, predicate, data, output value if true.
 	
-Map a function `f` to some data `x` and then substitute the mapping based on predicate `p` a value `out_true`.
+Map a function `f` and then substitute the mapping based on predicate `p` to some data `x`--replacements are based on a defined value `out_true`.
 
 OUTPUT: array.
 
@@ -20,7 +20,7 @@ mapsub(myname, B, cutoff, "REDACTED - boring name (probably a boring person)")
 Main - https://github.com/robertschnitman/afpj/blob/master/src/mapsub.jl
 """
 
-function mapsub(f, x, p, out_true)
+function mapsub(f, p, x, out_true)
 
   m = map(f, x)  
  
