@@ -14,7 +14,7 @@ mapsub(x -> x.^2, A, mod5, "REDACTED - divisible by 5")
 B = ["Aoi", "Tae Min", "Kali", "Robert"]
 myname(x) = string.("My name is ", x)
 cutoff(x) = ismatch.(r"Robert", x)
-mapsub(myname, B, cutoff, "REDACTED - boring name (probably a boring person)")
+mapsub(myname, cutoff, B, "REDACTED - boring name (probably a boring person)")
 
 # Source
 Main - https://github.com/robertschnitman/afpj/blob/master/src/mapsub.jl
@@ -24,7 +24,7 @@ function mapsub(f, p, x, out_true)
 
   m = map(f, x)  
  
-  output = ifelse(p.(m), out_true, m)
+  output = ifelse.(p.(m), out_true, m)
   
   output
   
