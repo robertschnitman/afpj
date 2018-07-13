@@ -15,7 +15,7 @@ Wickham, Hadley (2011). "The Split-Apply-Combine Strategy for Data Analysis". Jo
 
 function mapcat(f, a, d = 1)
 
-apply = map(f, a)
+  apply = map(f, a)
 
   if (d == 1 || d == 2)
   
