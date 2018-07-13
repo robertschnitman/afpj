@@ -18,6 +18,7 @@ mapsub(myname, cutoff, B, "REDACTED - boring name (probably a boring person)")
 
 # Source
 Main - https://github.com/robertschnitman/afpj/blob/master/src/mapsub.jl
+R equivalent - https://github.com/robertschnitman/afp/blob/master/R/mapsub.r
 """
 
 function mapsub(f, p, x, out_true)
