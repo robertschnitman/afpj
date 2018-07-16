@@ -1,7 +1,7 @@
 """
-reducemap(f, o, x, d) # function, (binary) operator, array/dataframe, dimension.
+reducemap(o, f, x, d) # function, (binary) operator, array/dataframe, dimension.
 	
-Map a function `f` to some data `x` and then reduce it column-wise (d = 1) or row-wise (d = 2, the default). Calls map() and reducechop(), which further calls mapslices() and reduce().
+Reduce column-wise (d = 1) or row-wise (d = 2) and then map a function `f` to some data `x`. Calls map() and reducechop(), which further calls mapslices() and reduce().
 
 OUTPUT: array/dataframe.
 
