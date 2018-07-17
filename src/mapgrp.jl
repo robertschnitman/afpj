@@ -8,7 +8,7 @@ OUTPUT: array/dataframe.
 # Examples
 code = vcat(fill(1, 33), fill(2, 33), fill(3, 33)) # 1st column is a category variable.
 A    = [code [101:199;] [201:299;]]
-mapgrp(maximum, 1, A)   # 3x3 Array. Maximum values by group.
+mapgrp(mean, 1, A)   # 3x3 Array. Maximum values by group.
 mapgrp(x -> x.^2, 1, A) # 99x3 Array. Squared values per group.
 mapgrp(x -> sum(x.^2), 1, A) # 99x3 Array. Sum of squared values per group.
 
