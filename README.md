@@ -16,7 +16,7 @@ Outline
 
 ## 0. Installation
 ---------------
-
+    # Julia >= 0.6.2
     Pkg.clone("https://github.com/robertschnitman/afpj.git")
 
 ## 1. Introduction
