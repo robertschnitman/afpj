@@ -141,6 +141,6 @@ on feasibility and future needs as appropriate.
 
 ## 7. See also
 ------------- 
-[Advanced R by Hadley Wickham](http://adv-r.had.co.nz/Functionals.html)
+[Advanced R by Hadley Wickham - Functionals chapter](http://adv-r.had.co.nz/Functionals.html)
 
 *End of Document*
