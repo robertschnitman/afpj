@@ -138,6 +138,7 @@ on feasibility and future needs as appropriate.
 5. [R programming language](https://www.r-project.org/)  
 6. [R - `afp`, the original library](https://github.com/robertschnitman/afp)  
 7. [R - `aggregate()`](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/aggregate.html)  
+8. Donat Studios (2017). CSV To Markdown Table Generator. https://donatstudios.com/CsvToMarkdownTable
 
 ## 7. See also
 ------------- 
