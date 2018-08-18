@@ -1,7 +1,7 @@
 """
 mapgrp(f, g, x) # function, group variable (column position), collection.
 
-Apply a function `f` based on a grouping variable `g` to a collection `x` . Calls map() and cut().
+Apply a function `f` based on a grouping variable `g` to a collection `x` . Calls map() and rip().
 
 OUTPUT: array/dataframe.
 
@@ -14,13 +14,13 @@ mapgrp(x -> sum(x.^2), 1, A) # 99x3 Array. Sum of squared values per group.
 
 # Source
 Main - https://github.com/robertschnitman/afpj/blob/master/src/mapgrp.jl
-cut() - https://github.com/robertschnitman/afpj/blob/master/src/cut.jl
+rip() - https://github.com/robertschnitman/afpj/blob/master/src/rip.jl
 """
 
 function mapgrp(f, g, x)
   
   # 1. Split
-  part1 = cut(x, g)
+  part1 = rip(x, g)
   part2 = map(y -> y[:, 1:end .!= g], part1)
   
   # 2, Apply
