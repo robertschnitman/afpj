@@ -32,7 +32,7 @@ The following sections provide examples for the primary functions:
 ## 2. `mapcat()`
 --------------
 
-After mapping a function to an array of arrays, one may wish to concatenate the results with with `[v/h]cat()`. To streamline this procedure, `mapcat()` takes the function, array of arrays, and dimension into a single call--the associated parameters are `f`, `a`, and `d` (1 for row-wise concatenation, 2 for column-wise) respectively.
+After mapping a function to an array of arrays, one may wish to concatenate the results with `[v/h]cat()`. To streamline this procedure, `mapcat()` takes the function, array of arrays, and dimension into a single call--the associated parameters are `f`, `a`, and `d` (1 for row-wise concatenation, 2 for column-wise) respectively.
 
 ### EXAMPLE
 
