@@ -3,8 +3,7 @@
 ***Recommended Citation:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Schnitman, Robert (2018). afpj v0.0.0.1. <https://github.com/robertschnitman/afpj>***
 
-Outline
--------
+## Outline
 
 1.  Introduction
 2.  `mapcat()`
@@ -15,13 +14,12 @@ Outline
 7. See also
 
 ## 0. Installation
----------------
+```
     # Julia >= 0.6.2
     Pkg.clone("https://github.com/robertschnitman/afpj.git")
+```
 
 ## 1. Introduction
----------------
-
 The `afpj` package--*Applied Functional Programming in Julia*--is based on the original R library, [`afp`](https://github.com/robertschnitman/afp). Some functions in this library are direct translations, while others cover gaps in Julia functionality. For example, `mapcat()` is the equivalent of `do.bind` and `mrchop()` replicates the process of its R counterpart, whereas `mapby()` attempts to simulate `aggregate()` from R.
 
 Thus, the purpose of `afpj` is to supplement base Julia and its libraries to support efficient and concise programming.
@@ -30,8 +28,6 @@ The following sections provide examples for the primary functions:
 `mapcat()`, `mrchop()`, and `mapby()`.
 
 ## 2. `mapcat()`
---------------
-
 After mapping a function to an array of arrays, one may wish to concatenate the results with `[v/h]cat()`. To streamline this procedure, `mapcat()` takes the function, array of arrays, and dimension into a single call--the associated parameters are `f`, `a`, and `d` (1 for row-wise concatenation, 2 for column-wise) respectively.
 
 ### EXAMPLE
@@ -72,8 +68,6 @@ After mapping a function to an array of arrays, one may wish to concatenate the 
      
 
 ## 3. `mrchop()`
-----------------
-
 As inspired by `mapslices()`, `mrchop()` acts as a dimension-specific version of `mapreduce()`.
 
 The parameters are `f`, `o`, `x`, and `d`--the function, (binary) operator, collection, and dimension respectively.
@@ -96,14 +90,12 @@ The parameters are `f`, `o`, `x`, and `d`--the function, (binary) operator, coll
 |  0.000566893 | 
 |  0.000832101 | 
 |  0.00100781  | 
-|  0.00111111  | 
+|  0.00111111  |  
 
 
    
 
 ## 4. `mapby()`
----------------
-
 The function [`aggregate()`](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/aggregate.html) from R allows for group-wise calculations. To reproduce and expand upon it by allowing for element-wise operations while maintaining the Array type, `mapby()` offers a solution for generating index-based results.
 
 One may obtain similar output with [`groupby()` or `by()` from the DataFrames library](https://en.wikibooks.org/wiki/Introducing_Julia/DataFrames#Subsets_and_groups).  
@@ -122,15 +114,12 @@ One may obtain similar output with [`groupby()` or `by()` from the DataFrames li
 
 
 ## 5. Conclusion
--------------
-
 The discussed functions will be improved on a
 continuous basis to (1) minimize repetitive iterative computations and (2)
 emphasize code efficiency and brevity. New functions to be added based
 on feasibility and future needs as appropriate.
 
 ## 6. References
--------------
 1. [Julia - `DataFrames` - `by()` and `groupby()`](https://en.wikibooks.org/wiki/Introducing_Julia/DataFrames#Subsets_and_groups)  
 2. [Julia - `map()`](https://docs.julialang.org/en/v0.6.1/stdlib/collections/#Base.map)  
 3. [Julia - `mapreduce()`](https://docs.julialang.org/en/v0.6.1/stdlib/collections/#Base.mapreduce-NTuple%7B4,Any%7D)  
@@ -141,7 +130,6 @@ on feasibility and future needs as appropriate.
 8. Donat Studios (2017). CSV To Markdown Table Generator. https://donatstudios.com/CsvToMarkdownTable
 
 ## 7. See also
-------------- 
 [Advanced R by Hadley Wickham - Functionals chapter](http://adv-r.had.co.nz/Functionals.html)
 
 *End of Document*
