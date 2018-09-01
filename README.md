@@ -9,7 +9,7 @@ Outline
 1.  Introduction
 2.  `mapcat()`
 3.  `mrchop()`
-4.  `mapgrp()`
+4.  `mapby()`
 5. Conclusion
 6. References
 7. See also
@@ -22,12 +22,12 @@ Outline
 ## 1. Introduction
 ---------------
 
-The `afpj` package--*Applied Functional Programming in Julia*--is based on the original R library, [`afp`](https://github.com/robertschnitman/afp). Some functions in this library are direct translations, while others cover gaps in Julia functionality. For example, `mapcat()` is the equivalent of `do.bind` and `mrchop()` replicates the process of its R counterpart, whereas `mapgrp()` attempts to simulate `aggregate()` from R.
+The `afpj` package--*Applied Functional Programming in Julia*--is based on the original R library, [`afp`](https://github.com/robertschnitman/afp). Some functions in this library are direct translations, while others cover gaps in Julia functionality. For example, `mapcat()` is the equivalent of `do.bind` and `mrchop()` replicates the process of its R counterpart, whereas `mapby()` attempts to simulate `aggregate()` from R.
 
 Thus, the purpose of `afpj` is to supplement base Julia and its libraries to support efficient and concise programming.
 
 The following sections provide examples for the primary functions:
-`mapcat()`, `mrchop()`, and `mapgrp()`.
+`mapcat()`, `mrchop()`, and `mapby()`.
 
 ## 2. `mapcat()`
 --------------
@@ -101,10 +101,10 @@ The parameters are `f`, `o`, `x`, and `d`--the function, (binary) operator, coll
 
    
 
-## 4. `mapgrp()`
+## 4. `mapby()`
 ---------------
 
-The function [`aggregate()`](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/aggregate.html) from R allows for group-wise calculations. To reproduce and expand upon it by allowing for element-wise operations while maintaining the Array type, `mapgrp()` offers a solution for generating index-based results.
+The function [`aggregate()`](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/aggregate.html) from R allows for group-wise calculations. To reproduce and expand upon it by allowing for element-wise operations while maintaining the Array type, `mapby()` offers a solution for generating index-based results.
 
 One may obtain similar output with [`groupby()` or `by()` from the DataFrames library](https://en.wikibooks.org/wiki/Introducing_Julia/DataFrames#Subsets_and_groups).  
 
@@ -112,7 +112,7 @@ One may obtain similar output with [`groupby()` or `by()` from the DataFrames li
 
     code = vcat(fill(1, 33), fill(2, 33), fill(3, 33)) # 1st column is a category variable.
     A    = [code [101:199;] [201:299;]]
-    mapgrp(mean, 1, A)   # 3x3 Array. Maximum values by group.
+    mapby(mean, 1, A)   # 3x3 Array. Maximum values by group.
     
 |      |         |         | 
 |------|---------|---------| 
