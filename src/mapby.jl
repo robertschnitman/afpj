@@ -1,5 +1,5 @@
 """
-mapgrp(f, g, x) # function, group variable (column position), collection.
+mapby(f, g, x) # function, group variable (column position), collection.
 
 Apply a function `f` based on a grouping variable `g` to a collection `x` . Calls map() and rip().
 
@@ -8,16 +8,16 @@ OUTPUT: array/dataframe.
 # Examples
 code = vcat(fill(1, 33), fill(2, 33), fill(3, 33)) # 1st column is a category variable.
 A    = [code [101:199;] [201:299;]]
-mapgrp(mean, 1, A)   # 3x3 Array. Maximum values by group.
-mapgrp(x -> x.^2, 1, A) # 99x3 Array. Squared values per group.
-mapgrp(x -> sum(x.^2), 1, A) # 99x3 Array. Sum of squared values per group.
+mapby(mean, 1, A)   # 3x3 Array. Maximum values by group.
+mapby(x -> x.^2, 1, A) # 99x3 Array. Squared values per group.
+mapby(x -> sum(x.^2), 1, A) # 99x3 Array. Sum of squared values per group.
 
 # Source
-Main - https://github.com/robertschnitman/afpj/blob/master/src/mapgrp.jl
+Main - https://github.com/robertschnitman/afpj/blob/master/src/mapby.jl
 rip() - https://github.com/robertschnitman/afpj/blob/master/src/rip.jl
 """
 
-function mapgrp(f, g, x)
+function mapby(f, g, x)
   
   # 1. Split
   part1 = rip(x, g)
