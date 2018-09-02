@@ -10,7 +10,7 @@ code = vcat(fill(1, 33), fill(2, 33), fill(3, 33)) # 1st column is a category va
 A    = [code [101:199;] [201:299;]]
 mapby(mean, 1, A)   # 3x3 Array. Maximum values by group.
 mapby(x -> x.^2, 1, A) # 99x3 Array. Squared values per group.
-mapby(x -> sum(x.^2), 1, A) # 99x3 Array. Sum of squared values per group.
+mapby(x -> sum(x.^2), 1, A) # 3x3 Array. Sum of squared values per group.
 
 # Source
 Main - https://github.com/robertschnitman/afpj/blob/master/src/mapby.jl
