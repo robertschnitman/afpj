@@ -12,4 +12,4 @@ Main - https://github.com/robertschnitman/afpj/blob/master/src/mapdims.jl
 R equivalent - https://github.com/robertschnitman/afp/blob/master/R/mapdims.R
 """
 
-mapdims(f, x) = map(d -> mapslices(f, x, d), [2; 1])
+mapdims(f, x) = map(d -> mapslices(f, x, d), [2; 1]) # Row-wise results first to coincide with the R-equivalent function.
