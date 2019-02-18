@@ -7,9 +7,6 @@ INPUTS: function, array/dataframe.
 
 OUTPUT: array/dataframe.
 
-# Examples
-See https://github.com/robertschnitman/afp.
-
 """
 
 function mapr(f, x)
