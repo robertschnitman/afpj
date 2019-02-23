@@ -1,5 +1,5 @@
 """
-mop(f, o, x, d) # summary statistic function, (binary) operator, array, dimension
+mop(f, o, x, d) # (summary statistic) function, (binary) operator, array, dimension
 
 Operate on an array by a summary statistic function. Based on the `afp` R library function `mop()`, which has origins in the R function `sweep()`.
 
