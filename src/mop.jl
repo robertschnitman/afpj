@@ -14,7 +14,3 @@ sweep() - https://stat.ethz.ch/R-manual/R-devel/library/base/html/sweep.html
 """
 
 mop(f, o, x, d) = mapslices(y -> o(y, f(y)), x, d)
-
-
-
-
