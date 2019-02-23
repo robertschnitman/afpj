@@ -8,7 +8,7 @@
 1.  Introduction
 2.  `mapcat()`
 3.  `mrchop()`
-4.  `mapby()`
+4.  `mop()`
 5. Conclusion
 6. References
 7. See also
@@ -20,12 +20,12 @@
 ```
 
 ## 1. Introduction
-The `afpj` package--*Applied Functional Programming in Julia*--is based on the original R library, [`afp`](https://github.com/robertschnitman/afp). Some functions in this library are direct translations, while others cover gaps in Julia functionality. For example, `mapcat()` is the equivalent of `do.bind` and `mrchop()` replicates the process of its R counterpart, whereas `mapby()` attempts to simulate `aggregate()` from R.
+The `afpj` package--*Applied Functional Programming in Julia*--is based on the original R library, [`afp`](https://github.com/robertschnitman/afp). Some functions in this library are direct translations, while others cover gaps in Julia functionality. For example, `mapcat()` is the equivalent of `do.bind` and `mrchop()` replicates the process of its R counterpart, whereas `mop()` attempts to simulate its [R equivalent](https://github.com/robertschnitman/afp/blob/master/R/mop.R).
 
 Thus, the purpose of `afpj` is to supplement base Julia and its libraries to support efficient and concise programming.
 
 The following sections provide examples for the primary functions:
-`mapcat()`, `mrchop()`, and `mapby()`.
+`mapcat()`, `mrchop()`, and `mop()`.
 
 ## 2. `mapcat()`
 After mapping a function to an array of arrays, one may wish to concatenate the results with `[v/h]cat()`. To streamline this procedure, `mapcat()` takes the function, array of arrays, and dimension into a single call--the associated parameters are `f`, `a`, and `d` (1 for row-wise concatenation, 2 for column-wise) respectively.
@@ -95,22 +95,27 @@ The parameters are `f`, `o`, `x`, and `d`--the function, (binary) operator, coll
 
    
 
-## 4. `mapby()`
-The function [`aggregate()`](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/aggregate.html) from R allows for group-wise calculations. To reproduce and expand upon it by allowing for element-wise operations while maintaining the Array type, `mapby()` offers a solution for generating index-based results.
-
-One may obtain similar output with [`groupby()` or `by()` from the DataFrames library](https://en.wikibooks.org/wiki/Introducing_Julia/DataFrames#Subsets_and_groups).  
+## 4. `mop()`
+The function [`mop()`](https://github.com/robertschnitman/afp/blob/master/R/mop.R) from the R library `afp` operates on an array by a summary statistic function according to a given dimension. In other words, it indexes values by the summary statistic function column-wise or row-wise.
 
 ### EXAMPLE
-
-    code = vcat(fill(1, 33), fill(2, 33), fill(3, 33)) # 1st column is a category variable.
-    A    = [code [101:199;] [201:299;]]
-    mapby(mean, 1, A)   # 3x3 Array. Maximum values by group.
     
-|      |         |         | 
-|------|---------|---------| 
-| 1.0  |   117.0 |   217.0 | 
-|  2.0 |   150.0 |   250.0 | 
-|  3.0 |   183.0 |   283.0 | 
+    A = [1:10 11:20 21:30;]
+    mop(median, /, A, 1)   # Divide each element by the median of the associated column.
+    
+|          |          |          | 
+|----------|----------|----------| 
+| 0.181818 | 0.709677 | 0.823529 | 
+| 0.363636 | 0.774194 | 0.862745 | 
+| 0.545455 | 0.83871  | 0.901961 | 
+| 0.727273 | 0.903226 | 0.941176 | 
+| 0.909091 | 0.967742 | 0.980392 | 
+| 1.09091  | 1.03226  | 1.01961  | 
+| 1.27273  | 1.09677  | 1.05882  | 
+| 1.45455  | 1.16129  | 1.09804  | 
+| 1.63636  | 1.22581  | 1.13725  | 
+| 1.81818  | 1.29032  | 1.17647  | 
+
 
 
 ## 5. Conclusion
@@ -126,7 +131,7 @@ on feasibility and future needs as appropriate.
 4. [Julia - `mapslices()`](https://docs.julialang.org/en/v0.6.2/stdlib/arrays/#Base.mapslices)  
 5. [R programming language](https://www.r-project.org/)  
 6. [R - `afp`, the original library](https://github.com/robertschnitman/afp)  
-7. [R - `aggregate()`](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/aggregate.html)  
+7. [R - `mop()`](https://github.com/robertschnitman/afp/blob/master/R/mop.R)  
 8. Donat Studios (2017). CSV To Markdown Table Generator. https://donatstudios.com/CsvToMarkdownTable
 
 ## 7. See also
