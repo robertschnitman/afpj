@@ -9,6 +9,7 @@ include("mapcat.jl")
 include("mapdims.jl")
 include("mapr.jl")
 include("mapc.jl")
+include("mop.jl")
 include("mrchop.jl")
 include("rip.jl")
 	
