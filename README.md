@@ -25,7 +25,7 @@ The `afpj` package--*Applied Functional Programming in Julia*--is based on the o
 Thus, the purpose of `afpj` is to supplement base Julia and its libraries to support efficient and concise programming.
 
 The following sections provide examples for the primary functions:
-`mapcat()`, `mrchop()`, and `mop()`. Tables were made with the (CSV to Markdown Table Generator)[https://donatstudios.com/CsvToMarkdownTable] tool (Donat Studios).
+`mapcat()`, `mrchop()`, and `mop()`. Tables were made with the [CSV to Markdown Table Generator](https://donatstudios.com/CsvToMarkdownTable) tool (Donat Studios).
 
 ## 2. `mapcat()`
 After mapping a function to an array of arrays, one may wish to concatenate the results with `[v/h]cat()`. To streamline this procedure, `mapcat()` takes the function, array of arrays, and dimension into a single call--the associated parameters are `f`, `a`, and `d` (1 for row-wise concatenation, 2 for column-wise) respectively.
