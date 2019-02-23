@@ -96,6 +96,8 @@ The parameters are `f`, `o`, `x`, and `d`--the function, (binary) operator, coll
 ## 4. `mop()`
 The function [`mop()`](https://github.com/robertschnitman/afp/blob/master/R/mop.R) attempts to simulate its R equivalent from the `afp` library: it operates on an array by a summary statistic function according to a given dimension. In other words, it indexes values by the summary statistic function column-wise or row-wise. The advantages of this function includes (1) the ability to compare individual values to the median of a variable, for example, and (2) the convenience to users of having them avoid writing anonymous functions within `mapslices()` to accomplish the same task (e.g. `mapslices(x -> x./median(x), A, 1)`).
 
+The parameters are the same as in `mrchop()`.
+
 ### EXAMPLE
 
     # Divide each element by the median of the associated column.
