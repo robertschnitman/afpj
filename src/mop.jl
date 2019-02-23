@@ -1,7 +1,7 @@
 """
 mop(f, o, x, d) # summary statistic function, (binary) operator, array, dimension
 
-Operate on an array by a summary statistic function. Based on the `afp` R library function `mop()`, which has further origins from the R function `sweep()`.
+Operate on an array by a summary statistic function. Based on the `afp` R library function `mop()`, which has origins in the R function `sweep()`.
 
 # Example
 A = [1:10 11:20 21:30;]
