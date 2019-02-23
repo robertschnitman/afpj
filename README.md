@@ -20,7 +20,7 @@
 ```
 
 ## 1. Introduction
-The `afpj` package--*Applied Functional Programming in Julia*--is based on the original R library, [`afp`](https://github.com/robertschnitman/afp). Some functions in this library are direct translations, while others cover gaps in Julia functionality. For example, `mapcat()` is the equivalent of `do.bind` and `mrchop()` replicates the process of its R counterpart, whereas `mop()` attempts to simulate its [R equivalent](https://github.com/robertschnitman/afp/blob/master/R/mop.R).
+The `afpj` package--*Applied Functional Programming in Julia*--is based on the original R library, [`afp`](https://github.com/robertschnitman/afp). Some functions in this library are direct translations, while others cover gaps in Julia functionality. For example, `mapcat()` is the equivalent of `do.bind` and `mrchop()` replicates the process of its R counterpart, whereas `mop()` attempts to simulate its [R equivalent](https://github.com/robertschnitman/afp/blob/master/R/mop.R) that simplifies `sweep()` from the same programming language (an attempted replication of the latter function is also in this package).
 
 Thus, the purpose of `afpj` is to supplement base Julia and its libraries to support efficient and concise programming.
 
@@ -126,14 +126,14 @@ emphasize code efficiency and brevity. New functions to be added based
 on feasibility and future needs as appropriate.
 
 ## 6. References
-1. [Julia - `DataFrames` - `by()` and `groupby()`](https://en.wikibooks.org/wiki/Introducing_Julia/DataFrames#Subsets_and_groups)  
-2. [Julia - `map()`](https://docs.julialang.org/en/v0.6.1/stdlib/collections/#Base.map)  
-3. [Julia - `mapreduce()`](https://docs.julialang.org/en/v0.6.1/stdlib/collections/#Base.mapreduce-NTuple%7B4,Any%7D)  
-4. [Julia - `mapslices()`](https://docs.julialang.org/en/v0.6.2/stdlib/arrays/#Base.mapslices)  
-5. [R programming language](https://www.r-project.org/)  
-6. [R - `afp`, the original library](https://github.com/robertschnitman/afp)  
-7. [R - `mop()`](https://github.com/robertschnitman/afp/blob/master/R/mop.R)  
-8. Donat Studios (2017). CSV To Markdown Table Generator. https://donatstudios.com/CsvToMarkdownTable
+1. [Julia - `map()`](https://docs.julialang.org/en/v0.6.1/stdlib/collections/#Base.map)  
+2. [Julia - `mapreduce()`](https://docs.julialang.org/en/v0.6.1/stdlib/collections/#Base.mapreduce-NTuple%7B4,Any%7D)  
+3. [Julia - `mapslices()`](https://docs.julialang.org/en/v0.6.2/stdlib/arrays/#Base.mapslices)  
+4. [R programming language](https://www.r-project.org/)  
+5. [R - `afp`, the original library](https://github.com/robertschnitman/afp)  
+6. [R - `afp` - `mop()`](https://github.com/robertschnitman/afp/blob/master/R/mop.R)  
+7. [R - `sweep()`](https://stat.ethz.ch/R-manual/R-devel/library/base/html/sweep.html)
+8. [Donat Studios (2017). CSV To Markdown Table Generator.](https://donatstudios.com/CsvToMarkdownTable)
 
 ## 7. See also
 [Advanced R by Hadley Wickham - Functionals chapter](http://adv-r.had.co.nz/Functionals.html)
