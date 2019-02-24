@@ -1,7 +1,8 @@
 """
-mapdims(f, x) # function, 2D Array
-mapc(f, x) # Analagous to mapslices(f, x, 1)
-mapr(f, x) # Analagous to mapslices(f, x, 2)
+mapdims(f, x) # function, 2D Array.
+mapc(f, x) # Analagous to mapslices(f, x, 1).
+mapr(f, x) # Analagous to mapslices(f, x, 2).
+maps(f, A, dims) # Abbreviation of mapslices().
 
 The function `mapdims()` maps over both dimensions of the 2D Array and return as an Array of Arrays. First element contains the row-wise results; the second holds the column-wise computations. The functions `mapc()` and `mapr()` call `mapslices()` to execute operations column-wise or row-wise respectively. The function `maps()` is an abbreviation for `mapslices()`--same functionality is maintained.
 
