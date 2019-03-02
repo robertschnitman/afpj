@@ -13,7 +13,7 @@ sweep(median(A[:, 1]), /, A, 1) # == mapslices(x -> x./median(A[:, 1]), A, 1) ==
 1. Main - mop() - https://github.com/robertschnitman/afpj/blob/master/src/mop.jl
 2. Main - sweep() - https://github.com/robertschnitman/afpj/blob/master/src/sweep.jl
 3. R equivalent - mop() - https://github.com/robertschnitman/afp/blob/master/R/mop.R
-4. R origin - sweep() - https://stat.ethz.ch/R-manual/R-devel/library/base/html/sweep.html
+4. R equivalent - sweep() - https://stat.ethz.ch/R-manual/R-devel/library/base/html/sweep.html
 """
 
 mop(f, o, x, d) = mapslices(y -> o(y, f(y)), x, d)
