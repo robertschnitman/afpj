@@ -27,14 +27,12 @@ function mapcat(f, a, d = 1)
 
   if (d == 1 || d == 2)
   
-    output = cat(d, apply...)
+    cat(d, apply...)
 
   else
     
     error("The dimensions input must either specify 1 (vertical concatenation) or 2 (horizontal).")
 	
-  end
-  
-  output
+  end  
   
 end
