@@ -1,7 +1,8 @@
 """
 mapcat(f, a, d = 1) # function, array of arrays, dimension.
+paircat(x, y)       # Array, Array
 	
-Map a function `f` to an array of arrays `a`, concatenating each array vertically (d = 1, the default) or horizontally (d = 2).
+`mapcat()` Maps a function `f` to an array of arrays `a`, concatenating each array vertically (d = 1, the default) or horizontally (d = 2). `paircat` row-appends two arrays pairwise.
 
 OUTPUT: array.
 
@@ -14,6 +15,8 @@ C = [[31:35;] [36:40;] [41:45;]]
 ABC = [A, B, C] # 3-element Array of Arrays
 mapcat(x -> x.^2, ABC)    # Row-wise concatenation (default d = 1) after squaring the 3 columns from each Array.
 mapcat(x -> x.^2, ABC, 2) # Column-wise concatenation of the same.
+
+paircat(A,B)
 
 # Sources
 Main - https://github.com/robertschnitman/afpj/blob/master/src/mapcat.jl
@@ -36,3 +39,5 @@ function mapcat(f, a, d = 1)
   end  
   
 end
+
+paircat(x, y) = mapcat(i -> cat(1, transpose(x[i,:]), transpose(y[i,:])), 1:size(x)[1])
